@@ -5,11 +5,8 @@ const INITIAL_STATE=[]
 
 
 
-//userId,userEmail,userName,userImageUrl
 export const categoriesState=(state=INITIAL_STATE,action)=>{
-    // console.log('I am here');
-   
-    
+
 
     switch(action.type){
         case(LOAD_CATEGORIES):{
@@ -21,12 +18,6 @@ export const categoriesState=(state=INITIAL_STATE,action)=>{
         }
 
 
-        
-
-        // case(SIGN_OUT):{
-        //     return {...INITIAL_STATE, isSignedIn: false}
-
-        // }
 
         default:{
             return state

@@ -5,9 +5,8 @@ const INITIAL_STATE=[]
 
 
 
-//userId,userEmail,userName,userImageUrl
 export const cartState=(state=INITIAL_STATE,action)=>{
-    // console.log('I am here');
+    
    
     
 
@@ -23,11 +22,6 @@ export const cartState=(state=INITIAL_STATE,action)=>{
         }
 
         
-
-        // case(SIGN_OUT):{
-        //     return {...INITIAL_STATE, isSignedIn: false}
-
-        // }
 
         default:{
             return state

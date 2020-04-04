@@ -3,10 +3,6 @@ import {useSelector,useDispatch} from 'react-redux';
 import {addSelection,removeSelection} from '../../actions';
 
 import {
-    Table,
-    TableBody,
-    TableHeader,
-    TableHeaderColumn,
     TableRow,
     TableRowColumn,
   } from 'material-ui/Table';
@@ -14,14 +10,14 @@ import {
   import Checkbox from 'material-ui/Checkbox';
 
 const ItemTableRow=(props)=>{
-    let {item, ...others} = props
+    let {item} = props
     
     
     const item_ids = useSelector(state => state.selectionState);
     const dispatch = useDispatch();
 
     const onSelectionChange=(e)=>{
-        console.log(e.target.value);
+       
         
         if(e.target.checked){
             dispatch(addSelection(props.item))
@@ -38,11 +34,7 @@ const ItemTableRow=(props)=>{
         return item_ids.includes(props.item.id);
     }
 
-    const check=(e)=>{
-        console.log(e.target.checked);
-        
-    }
-    
+
     
    
     // return (

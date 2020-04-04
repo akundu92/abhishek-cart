@@ -9,9 +9,6 @@ const ItemFilter=()=>{
     const categories=useSelector(state=>state.categoriesState)
     const dispatch=useDispatch();
 
-    // const renderOptions=()=>{
-    // return categories.map(category=><option value={category.id}>{category.name}</option>)
-    // }
     const renderOptions=()=>{
     return categories.map(category=><MenuItem key ={category.id} value={category.id} primaryText={category.name} ></MenuItem>)
     }
@@ -43,7 +40,7 @@ const ItemFilter=()=>{
     const onFilterChange=(e,k,v)=>{
 
        categories.map(category=>{
-        //    console.log(v);
+
            
         if(category.id===v){
             

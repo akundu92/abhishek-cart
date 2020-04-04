@@ -5,11 +5,7 @@ const INITIAL_STATE=null
 
 
 
-//userId,userEmail,userName,userImageUrl
 export const filterState=(state=INITIAL_STATE,action)=>{
-    // console.log('I am here');
-   
-    
 
     switch(action.type){
         
