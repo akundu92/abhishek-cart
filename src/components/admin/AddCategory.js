@@ -17,9 +17,12 @@ const AddCategory=()=>{
   
     const onClick=(e)=>{
         
-        
-        dispatch(addCategory(category));
-
+        if(category){
+            dispatch(addCategory(category));
+        }
+       else{
+           alert('Category can not be Empty')
+       }
     }
 
     

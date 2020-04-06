@@ -18,10 +18,6 @@ export const selectionState=(state=INITIAL_STATE,action)=>{
                     break;
                 }
             }
-            // console.log(action.payload)
-            // newState.splice(action.payload.id, 1);
-            // // console.log(action.payload.name);
-            // console.log(newState)
             newState.splice(removalIndex,1);
             return newState;    
         }

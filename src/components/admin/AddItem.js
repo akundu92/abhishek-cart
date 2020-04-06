@@ -36,6 +36,7 @@ const AddItem=()=>{
         <>
     <ItemFilter/>
     <TextField value={item} onChange={onItemValueChange} hintText="Add new Item here"/>
+    <br />
     <RaisedButton onClick={onAddItemClick}  label='Add Item' />
     </>
     )
