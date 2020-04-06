@@ -5,7 +5,7 @@ export const selectionState=(state=INITIAL_STATE,action)=>{
 
     switch(action.type){
         case(ADD_SELECTION):{
-            console.log([...state,action.payload.id] )
+            
             return [...state,action.payload.id]    
         }
 

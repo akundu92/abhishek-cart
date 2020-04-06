@@ -47,7 +47,7 @@ const ItemTableRow=(props)=>{
         <TableRow  onChange={onSelectionChange} selected={checkChecked()}>
             
             <TableRowColumn><center><Checkbox checked={checkChecked()} style={{marginLeft: "70px"}}/></center></TableRowColumn>
-            <TableRowColumn><center>{item.name}</center></TableRowColumn>
+            <TableRowColumn>{item.name}</TableRowColumn>
         </TableRow>
     )
 }

@@ -47,6 +47,7 @@ const HomePage=()=>{
             {/* <ItemList />  */}
             {/* <button onClick={addToCartOnClick}>Add to Cart</button> */}
             <ItemTable />
+            <br /><br /><br />
             {renderButton()}
         </center>)
  }

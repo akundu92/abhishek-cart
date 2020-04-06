@@ -3,10 +3,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import { Link, useHistory} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
  const Header=()=>{
 
-
+    const cartState=useSelector(state=>state.cartState);
     const history=useHistory();
     const styles = {
         title: {
@@ -18,7 +19,11 @@ import { Link, useHistory} from 'react-router-dom';
 
         const buttonStyle = {
             backgroundColor: 'transparent',
-            color: 'white'
+            color: 'white',
+            marginTop:'07px',
+            fontWeight: 'bold',
+            size:'large',
+            variant:'text'
           };
 
           const onAdminClick=()=>{
@@ -29,14 +34,17 @@ import { Link, useHistory} from 'react-router-dom';
             history.push('./cart')
         }
        
-
+        const renderCartButton=()=>{
+          return (cartState.length>0?<FlatButton label={`Cart(${cartState.length})`} onClick={onCartclick} style={buttonStyle}/>
+        :<FlatButton label="Cart" onClick={onCartclick} style={buttonStyle}/>)
+        }
         
 
           
         return(
         <>
             <FlatButton label="Admin" onClick={onAdminClick} style={buttonStyle}/>
-            <FlatButton label="Cart" onClick={onCartclick} style={buttonStyle}/>
+            {renderCartButton()}
         </>
         )
         

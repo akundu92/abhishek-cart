@@ -20,7 +20,8 @@ const AddItem=()=>{
 
     const onAddItemClick=()=>{
       if(filterState){
-      dispatch(addItem(item,filterState))
+      dispatch(addItem(item,filterState));
+      setItem('');
       }
       else{
         alert('Please select a Category')

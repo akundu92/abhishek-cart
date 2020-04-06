@@ -45,7 +45,7 @@ const ItemTable=()=>{
     const itemsAfterFilter=filterItems();
 
     const renderTableRow=(items)=>{
-        return items.map(item=><ItemTableRow item={item}> /</ItemTableRow>)
+        return items.map(item=><ItemTableRow item={item} key={item.id}>  /</ItemTableRow>)
      }
 
     
@@ -62,9 +62,9 @@ const ItemTable=()=>{
         return (
             <Table multiSelectable={true} >
                  <TableHeader displaySelectAll={false}>
-                    <TableRow>
+                    <TableRow >
                      <TableHeaderColumn>Select</TableHeaderColumn>
-                      <center><TableHeaderColumn>Name</TableHeaderColumn></center>
+                      <TableHeaderColumn>Name</TableHeaderColumn>
                     </TableRow>
                    </TableHeader>
                    <TableBody>
@@ -84,7 +84,7 @@ const ItemTable=()=>{
 
 
     return (<>
-    <ul>{listItems()}</ul>
+    {listItems()}
      
     </>)
     // return(

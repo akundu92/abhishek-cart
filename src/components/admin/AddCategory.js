@@ -19,6 +19,7 @@ const AddCategory=()=>{
         
         if(category){
             dispatch(addCategory(category));
+            setCategory('');
         }
        else{
            alert('Category can not be Empty')
