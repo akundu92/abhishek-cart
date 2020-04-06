@@ -5,13 +5,24 @@ export const selectionState=(state=INITIAL_STATE,action)=>{
 
     switch(action.type){
         case(ADD_SELECTION):{
-  
+            console.log([...state,action.payload.id] )
             return [...state,action.payload.id]    
         }
 
         case(REMOVE_SELECTION):{
             let newState = [...state];
-            newState.splice(action.payload, 1);
+            let removalIndex=0;
+            for(let i=0;i<newState.length;i++){
+                if(newState[i]===action.payload.id){
+                    removalIndex=i;
+                    break;
+                }
+            }
+            // console.log(action.payload)
+            // newState.splice(action.payload.id, 1);
+            // // console.log(action.payload.name);
+            // console.log(newState)
+            newState.splice(removalIndex,1);
             return newState;    
         }
 
