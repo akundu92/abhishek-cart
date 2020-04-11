@@ -1,6 +1,7 @@
 import React from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import {removeFromCart} from '../../actions'
 
 
@@ -36,7 +37,7 @@ const CartDisplay=()=>{
     }
 
     const renderButton=()=>{
-        return cartState.length>0?<center><RaisedButton label="Clear Cart" secondary={true} style={style} onClick={()=>{dispatch(removeFromCart())}}/></ center>:''
+        return cartState.length>0?<center><RaisedButton label="Buy" primary={true} style={style}/><FlatButton label="Clear Cart" primary={true} style={style} onClick={()=>{dispatch(removeFromCart())}}/></ center>:''
     }
 
     return (<>

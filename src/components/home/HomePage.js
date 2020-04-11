@@ -38,7 +38,7 @@ const HomePage=()=>{
 
 
     const renderButton=()=>{
-        return itemsState.length>0?<center><RaisedButton label="Add to Cart" primary={true} onClick={addToCartOnClick}/></ center>:''
+        return selectionState.length>0?<center><RaisedButton label="Add to Cart" primary={true} onClick={addToCartOnClick}/></ center>:''
     }
     
 
