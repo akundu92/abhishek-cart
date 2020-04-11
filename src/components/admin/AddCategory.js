@@ -30,7 +30,7 @@ const AddCategory=()=>{
     return (<>
     {/* <input value={category} onChange={onChange}></input> */}
     <TextField value={category} onChange={onChange}  hintText="Add new Category Here"/> <br />
-    <RaisedButton onClick={onClick} label='Add Category'></RaisedButton>
+    <RaisedButton onClick={onClick} primary={true} label='Add Category'></RaisedButton>
    
     </>)
 }
