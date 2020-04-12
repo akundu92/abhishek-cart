@@ -6,12 +6,13 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducers from './reducers';
 
-const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')): {}
+// const persistedState = localStorage.getItem('reduxState') ? JSON.parse(localStorage.getItem('reduxState')): {}
+const persistedState = sessionStorage.getItem('reduxState') ? JSON.parse(sessionStorage.getItem('reduxState')): {}
 
 const store=createStore(reducers,persistedState);
 
 store.subscribe(()=>{
-  localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+  sessionStorage.setItem('reduxState', JSON.stringify(store.getState()))
 })
 
 

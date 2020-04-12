@@ -6,7 +6,7 @@ import {useDispatch,useSelector} from 'react-redux';
 export default ()=>{
   const dispatch = useDispatch();
     useEffect(() => {
-      if(!localStorage.getItem('reduxState')){
+      if(!sessionStorage.getItem('reduxState')){
         dispatch(loadItems(items));
         dispatch(loadCategories(categories))
       }
